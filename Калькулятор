@@ -1,0 +1,76 @@
+using System;
+using System.Security.Cryptography.X509Certificates;
+
+double a;
+double b;
+double total;
+char oper;
+
+Console.WriteLine("Введите первое число:");
+a = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Введите действие:");
+oper = Convert.ToChar(Console.ReadLine());
+
+Console.WriteLine("Введите второе число:");
+b = Convert.ToDouble(Console.ReadLine());
+
+if (oper == '+')
+{
+    total = a + b;
+    Console.WriteLine("Cумма " + a + " и " + b + " равна " + total + ".");
+    
+}
+
+else if (oper == '-')
+{
+    total = a - b;
+    Console.WriteLine("Разность " + a + " и " + b + " равна " + total + ".");
+}
+
+else if (oper == '*')
+{
+    total = a * b;
+    Console.WriteLine("Умножение " + a + " на " + b + " равно " + total + ".");
+}
+
+else if (oper == '/')
+{
+    total = a / b;
+    Console.WriteLine("Деление " + a + " на " + b + " равно " + total + ".");
+}
+
+else if (oper == 'n') 
+{
+    double pow = Math.Pow(a, b);
+    Console.WriteLine("Возведение в степень " + a + " на " + b + " равно " + pow + ".");
+}
+
+else if (oper == 'k')
+{
+    double pow = Math.Sqrt(b);
+    Console.WriteLine("квадратный корень " + pow + ".");
+}
+
+else if (oper == '%')
+{
+    double d = a / b * 1;
+    Console.WriteLine("процент " + a + " на " + b + " равно " + d + ".");
+}
+
+else if (oper == 'f')
+{
+
+    int fact = 1;
+    Console.Write("Результат ");
+    for (int i = 2; i <= a; i++)
+    {
+        fact = fact * i;
+    }
+    Console.WriteLine(fact);
+}
+
+else
+{
+    Console.WriteLine("Неизвестный оператор.");
+}
